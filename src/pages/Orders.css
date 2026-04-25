@@ -1,0 +1,27 @@
+.orders-list { display: flex; flex-direction: column; gap: 16px; }
+
+.order-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px;
+  transition: border-color 0.2s;
+}
+.order-card:hover { border-color: rgba(201,168,76,0.3); }
+
+.order-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
+.order-id { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--gold); display: block; }
+.order-date { font-size: 12px; color: var(--text-dim); margin-top: 3px; display: block; }
+
+.order-header-right { text-align: right; }
+.order-status { display: block; background: rgba(39,174,96,0.1); color: #2ecc71; border: 1px solid rgba(39,174,96,0.3); padding: 3px 12px; border-radius: 100px; font-size: 11px; margin-bottom: 4px; }
+.order-total { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--text); }
+
+.order-items-preview { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.order-item-chip {
+  background: var(--bg3); border: 1px solid var(--border);
+  border-radius: 100px; padding: 4px 12px; font-size: 12px; color: var(--text-muted);
+  display: flex; gap: 8px;
+}
+.order-more { font-size: 12px; color: var(--text-dim); align-self: center; }
+
+.order-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 1px solid var(--border); }
+.order-addr { font-size: 12px; color: var(--text-muted); max-width: 60%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

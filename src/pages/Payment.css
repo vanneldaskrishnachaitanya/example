@@ -1,0 +1,44 @@
+.payment-layout { display: grid; grid-template-columns: 1fr 360px; gap: 28px; align-items: start; }
+.payment-left { display: flex; flex-direction: column; gap: 20px; }
+
+.pay-section h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; margin-bottom: 20px; }
+.pay-fields { display: flex; flex-direction: column; gap: 16px; }
+.field-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.field-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.field-group { display: flex; flex-direction: column; gap: 8px; }
+.field-group label { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+
+.method-tabs { display: flex; gap: 10px; margin-bottom: 24px; flex-wrap: wrap; }
+.method-tab {
+  background: var(--bg3); border: 1px solid var(--border);
+  color: var(--text-muted); padding: 10px 18px; border-radius: var(--radius);
+  font-size: 13px; transition: all 0.2s;
+}
+.method-tab:hover { border-color: var(--gold); color: var(--text); }
+.method-tab.active { border-color: var(--gold); color: var(--gold); background: var(--gold-dim); }
+
+.cod-info {
+  background: var(--bg3); border: 1px solid var(--border);
+  padding: 16px 20px; border-radius: var(--radius);
+  font-size: 13px; color: var(--text-muted); line-height: 1.6;
+  display: flex; gap: 12px; align-items: flex-start;
+}
+
+/* Summary */
+.pay-summary .card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; margin-bottom: 16px; }
+.pay-items { margin-bottom: 20px; display: flex; flex-direction: column; gap: 12px; }
+.pay-item { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.pay-item:last-child { border-bottom: none; }
+.pay-item-name { font-size: 13px; }
+.pay-item-qty { font-size: 11px; color: var(--text-dim); margin-top: 3px; }
+
+.summary-lines { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.summary-line { display: flex; justify-content: space-between; font-size: 13px; color: var(--text-muted); }
+.summary-total { display: flex; justify-content: space-between; padding-top: 14px; border-top: 1px solid var(--border); font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; }
+
+.secure-badge { font-size: 11px; color: var(--text-dim); text-align: center; margin-top: 12px; }
+
+@media (max-width: 900px) {
+  .payment-layout { grid-template-columns: 1fr; }
+  .field-row-3 { grid-template-columns: 1fr 1fr; }
+}

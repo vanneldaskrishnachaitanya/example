@@ -1,0 +1,47 @@
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px; height: 72px;
+  background: rgba(14,14,14,0.95);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.nav-brand {
+  display: flex; align-items: center; gap: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; letter-spacing: 0.12em;
+  color: var(--text);
+}
+.nav-brand em { color: var(--gold); font-style: normal; }
+.brand-icon { color: var(--gold); font-size: 0.8rem; }
+
+.nav-links { display: flex; gap: 32px; }
+.nav-links a {
+  font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-muted); transition: color 0.2s; padding: 4px 0;
+  border-bottom: 1px solid transparent;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--text); border-bottom-color: var(--gold); }
+
+.nav-actions { display: flex; align-items: center; gap: 16px; }
+.nav-user { font-size: 13px; color: var(--text-muted); }
+.nav-btn { padding: 8px 18px; font-size: 12px; }
+
+.nav-cart {
+  position: relative; display: flex; align-items: center;
+  color: var(--text-muted); transition: color 0.2s; padding: 6px;
+}
+.nav-cart:hover, .nav-cart.active { color: var(--gold); }
+.cart-badge {
+  position: absolute; top: -2px; right: -4px;
+  background: var(--gold); color: #0e0e0e;
+  font-size: 10px; font-weight: 600; width: 16px; height: 16px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .navbar { padding: 0 20px; }
+  .nav-links { display: none; }
+  .nav-user { display: none; }
+}
